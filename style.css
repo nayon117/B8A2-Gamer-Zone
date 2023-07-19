@@ -14,10 +14,9 @@ body {
 .container {
   width: 90%;
   max-width: 1920px;
-  margin: 4rem auto;
+  margin: 4.5rem auto;
 }
 .image {
-  
   max-width: 100%;
   object-fit: cover;
 }
@@ -157,72 +156,109 @@ nav {
   color: #534c64;
   font-size: 1rem;
   font-weight: 400;
-  padding-top: .5em;
+  padding-top: 0.5em;
 }
 .games-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 0.8rem;
 }
-.card{
-    position: relative;
-    width: 22.5%;
+.card {
+  position: relative;
+  width: 22.5%;
 }
-.card-img{
-    max-width: 100%;
-    transition: all ease-in 0.3s;
+.card-img {
+  max-width: 100%;
+  transition: all ease-in 0.3s;
 }
 .card:hover .card-img {
-    filter: brightness(0.3);
-    border: 4px solid #ff42a5;
-    border-radius: 20px;
-  }
-  .card:hover .watch-now{
-    color: #fff;
+  filter: brightness(0.3);
+  border: 4px solid #ff42a5;
+  border-radius: 20px;
 }
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.4s;
-    color: #fff;
-  }
-  .card:hover .overlay {
-    display: flex;
-    opacity: 1;
-  
-  }
+.card:hover .watch-now {
+  color: #fff;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s;
+  color: #fff;
+}
+.card:hover .overlay {
+  display: flex;
+  opacity: 1;
+}
 
-  .fa-play {
-    font-size: 2rem;
-    padding-left: 0.2em;
-  }
+.fa-play {
+  font-size: 2rem;
+  padding-left: 0.2em;
+}
 
-  .watch-now {
-    font-size: 1rem;
-    padding-left: 0.5em;
-    color: #fff;
-  }
+.watch-now {
+  font-size: 1rem;
+  padding-left: 0.5em;
+  color: #fff;
+}
 
-  .card p {
-    color: #534c64;
-    font-size: 1rem;
-    text-align: left;
-  }
+.card p {
+  color: #534c64;
+  font-size: 1rem;
+  text-align: left;
+}
+
+/*======================
+   play section styles
+   ====================== */
+.play-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  gap: 1rem;
+}
+.play-container h2{
+  font-size: 2.5rem;
+}
+.play-container p{
+  font-size: 1rem;
+  padding-top: 1em;
+  color: #534C64;
+  font-weight: 400;
+  width: 50%;
+}
+.play-content {
+  padding: .5em 1em;
+}
+.play-img {
+  position: relative;
+  padding: .5em 1em;
+}
+ 
+.small-img {
+  width: 40%;
+  position: absolute;
+  left: -23%;
+  bottom: -15%;
+   
+}
 
 /*================== Media queries========================  */
 
 /* for small devices  */
 @media screen and (max-width: 576px) {
   .nav-container,
-  .nav-menus, .games-container {
+  .nav-menus,
+  .games-container, .play-container {
     flex-direction: column;
   }
   .nav-menus {
@@ -245,27 +281,37 @@ nav {
   .banner-second-title {
     font-size: 2rem;
   }
-  .games-section-title{
+  .games-section-title {
     font-size: 2rem;
   }
-  .card{
-    width: 100%; 
+  .card {
+    width: 100%;
   }
-  .fa-play{
-    margin-left:6rem;
+  .fa-play {
+    margin-left: 6rem;
   }
-  .card p{
+  .card p {
     width: 80%;
     text-align: justify;
     padding: 0.3em 1.8em;
   }
-  
-
+  .play-container{
+    text-align: center;
+  }
+  .play-container p{
+    width: 100%;
+  }
+  .play-img{
+    max-width: 60%;
+  }
 }
 
 /* for tablet or medium devices */
 @media screen and (min-width: 577px) and (max-width: 768px) {
   .nav-menus {
     gap: 1rem;
+  }
+  .play-img{
+    max-width: 60%;
   }
 }
