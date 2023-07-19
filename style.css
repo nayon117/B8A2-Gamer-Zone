@@ -1,6 +1,6 @@
 :root {
   --title-color: #0b0223;
-  --btn-color:#FF42A5;
+  --btn-color: #ff42a5;
 }
 /* shared styles  */
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
@@ -19,6 +19,18 @@ body {
 .image {
   max-width: 100%;
   object-fit: cover;
+}
+.btn {
+  background-color: var(--btn-color);
+  color: #fff;
+  padding: 1em 1.5em;
+  margin-top: .5em;
+  border-radius: 48px;
+  border: none;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+ 
 }
 
 /* =================
@@ -46,8 +58,8 @@ nav {
   font-weight: 700;
   color: var(--title-color);
 }
-.pink-color{
-    color: var(--btn-color);
+.pink-color {
+  color: var(--btn-color);
 }
 .nav-menus {
   display: flex;
@@ -67,6 +79,7 @@ nav {
 .nav-btn {
   border-radius: 8px;
   background: rgba(11, 2, 35, 0.1);
+  color: #3C354F;
   border: none;
   padding: 0.6em 1em;
   cursor: pointer;
@@ -78,25 +91,88 @@ nav {
   margin-left: 0.5em;
 }
 
+/*====================
+ banner styles       
+ ====================*/
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 100vh;
+}
+.banner-content {
+  width: 50%;
+
+}
+.banner-first-title {
+  color: #0b0223;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.banner-second-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.banner-second-title i{
+    font-size: .2em;
+}
+  
+.banner-content p {
+  color: #534c64;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  padding: .8em 0em;
+}
+.banner-btn {
+  border-radius: 48px;
+  background: #4ec5f7;
+}
+.banner-img {
+  width: 50%;
+  padding: 1.5em 1.5em;
+}
 
 /*================== Media queries========================  */
 
 /* for small devices  */
-@media screen and (max-width:576px) {
-    .nav-container, .nav-menus{
-        flex-direction: column;
-    }
-    .nav-menus{
-        margin-top: 1em;
-    }
-    .nav-list-item{
-        padding-bottom: 1em;
-    }
+@media screen and (max-width: 576px) {
+  .nav-container,
+  .nav-menus {
+    flex-direction: column;
+  }
+  .nav-menus {
+    margin-top: 1em;
+  }
+  .nav-list-item {
+    padding-bottom: 1em;
+  }
+  .banner-container{
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .banner-content{
+    padding: 0.5em 0.5em 0em 2.5em;
+  }
+
+  .banner-first-title{
+    font-size: 1rem;
+  }
+  .banner-second-title{
+    font-size: 2rem;
+  }
 }
 
 /* for tablet or medium devices */
-@media screen and (min-width:577px) and (max-width:768px) {
-    .nav-menus{
-        gap: 1rem;
-    }
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .nav-menus {
+    gap: 1rem;
+  }
 }
