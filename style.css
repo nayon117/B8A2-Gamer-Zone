@@ -1,8 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
+:root {
+  --title-color: #0b0223;
+  --btn-color:#FF42A5;
 }
-body{
-    font-family: 'Work Sans', sans-serif;
+/* shared styles  */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  width: 90%;
+  max-width: 1920px;
+  margin: 4rem auto;
+}
+.image {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* =================
+   navbar styles 
+=================== */
+nav {
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 2em 0em;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  width: 50%;
+}
+.logo-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--title-color);
+}
+.pink-color{
+    color: var(--btn-color);
+}
+.nav-menus {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.nav-list-item {
+  list-style: none;
+}
+.nav-link {
+  text-decoration: none;
+  color: #3c354f;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.nav-btn {
+  border-radius: 8px;
+  background: rgba(11, 2, 35, 0.1);
+  border: none;
+  padding: 0.6em 1em;
+  cursor: pointer;
+}
+.fa-youtube {
+  color: #f61c0d;
+}
+.fa-brands {
+  margin-left: 0.5em;
+}
+
+
+/*================== Media queries========================  */
+
+/* for small devices  */
+@media screen and (max-width:576px) {
+    .nav-container, .nav-menus{
+        flex-direction: column;
+    }
+    .nav-menus{
+        margin-top: 1em;
+    }
+    .nav-list-item{
+        padding-bottom: 1em;
+    }
+}
+
+/* for tablet or medium devices */
+@media screen and (min-width:577px) and (max-width:768px) {
+    .nav-menus{
+        gap: 1rem;
+    }
 }
