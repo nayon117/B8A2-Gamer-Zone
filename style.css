@@ -226,31 +226,109 @@ nav {
   padding: 1em;
   gap: 1rem;
 }
-.play-container h2{
+.play-container h2 {
   font-size: 2.5rem;
 }
-.play-container p{
+.play-container p {
   font-size: 1rem;
   padding-top: 1em;
-  color: #534C64;
+  color: #534c64;
   font-weight: 400;
   width: 50%;
 }
 .play-content {
-  padding: .5em 1em;
+  padding: 0.5em 1em;
 }
 .play-img {
   position: relative;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
 }
- 
+
 .small-img {
   width: 40%;
   position: absolute;
   left: -23%;
   bottom: -15%;
-   
 }
+/*=====================
+ button container styles 
+ ======================= */
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.2rem;
+  margin-top: 6rem;
+  padding: 1em 1em;
+}
+.games-btn {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 0.35rem;
+  padding: 0.6em 1em;
+  border: none;
+  border-radius: 50px;
+  background: #fff;
+}
+.games-name {
+  color: #0b0223;
+  font-size: .71rem;
+  font-weight: 600;
+}
+.button-container img{
+  max-width: 50%;
+}
+
+/* ================
+footer styles =====
+=================== */
+
+.footer-logo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+}
+.footer-list {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  padding: 2em 3em;
+  gap: .8rem;
+}
+.social-icons{
+  text-align: center;
+  font-size: 1.5rem;
+}
+.footer-list li{
+  list-style: none;
+}
+.terms-list{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: 2em 6em;
+  gap: .8rem;
+}
+.terms-list li{
+  list-style: none;
+}
+.footer-container p{
+  text-align: center;
+  padding-top: .8em;
+}
+footer{
+  background-color: #0B0223;
+  color: #fff;
+  padding: 2.5em 3em;
+}
+
+
+
+
+
+
+
+
 
 /*================== Media queries========================  */
 
@@ -258,7 +336,8 @@ nav {
 @media screen and (max-width: 576px) {
   .nav-container,
   .nav-menus,
-  .games-container, .play-container {
+  .games-container,
+  .play-container {
     flex-direction: column;
   }
   .nav-menus {
@@ -295,14 +374,25 @@ nav {
     text-align: justify;
     padding: 0.3em 1.8em;
   }
-  .play-container{
+  .play-container {
     text-align: center;
   }
-  .play-container p{
+  .play-container p {
     width: 100%;
   }
-  .play-img{
-    max-width: 60%;
+  .play-img {
+    max-width: 40%;
+  }
+  .button-container, .footer-list  {
+    grid-template-columns: repeat(3, 1fr);
+  }
+   
+  .footer-list{
+    padding: 2em 0.1em;
+  }
+  .terms-list{
+    grid-template-columns: repeat(2,1fr);
+    padding: 2em 0.1em;
   }
 }
 
@@ -311,7 +401,21 @@ nav {
   .nav-menus {
     gap: 1rem;
   }
-  .play-img{
+  .play-img {
     max-width: 60%;
+  }
+  .button-container, .footer-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .terms-list{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* large device  */
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .button-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
