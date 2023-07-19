@@ -17,6 +17,7 @@ body {
   margin: 4rem auto;
 }
 .image {
+  
   max-width: 100%;
   object-fit: cover;
 }
@@ -24,13 +25,15 @@ body {
   background-color: var(--btn-color);
   color: #fff;
   padding: 1em 1.5em;
-  margin-top: .5em;
+  margin-top: 0.5em;
   border-radius: 48px;
   border: none;
   color: #fff;
   font-size: 0.8rem;
   font-weight: 600;
- 
+}
+.pink-color {
+  color: var(--btn-color);
 }
 
 /* =================
@@ -58,9 +61,7 @@ nav {
   font-weight: 700;
   color: var(--title-color);
 }
-.pink-color {
-  color: var(--btn-color);
-}
+
 .nav-menus {
   display: flex;
   align-items: center;
@@ -79,7 +80,7 @@ nav {
 .nav-btn {
   border-radius: 8px;
   background: rgba(11, 2, 35, 0.1);
-  color: #3C354F;
+  color: #3c354f;
   border: none;
   padding: 0.6em 1em;
   cursor: pointer;
@@ -103,7 +104,6 @@ nav {
 }
 .banner-content {
   width: 50%;
-
 }
 .banner-first-title {
   color: #0b0223;
@@ -120,16 +120,16 @@ nav {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.banner-second-title i{
-    font-size: .2em;
+.banner-second-title i {
+  font-size: 0.2em;
 }
-  
+
 .banner-content p {
   color: #534c64;
   font-size: 1rem;
   font-weight: 500;
   text-transform: lowercase;
-  padding: .8em 0em;
+  padding: 0.8em 0em;
 }
 .banner-btn {
   border-radius: 48px;
@@ -140,12 +140,89 @@ nav {
   padding: 1.5em 1.5em;
 }
 
+/*======================
+ games section styles  
+ ======================*/
+
+.games-section {
+  text-align: center;
+  margin-top: 4rem;
+}
+.games-section-title {
+  color: var(--title-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.games-section-desc {
+  color: #534c64;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-top: .5em;
+}
+.games-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+.card{
+    position: relative;
+    width: 22.5%;
+}
+.card-img{
+    max-width: 100%;
+    transition: all ease-in 0.3s;
+}
+.card:hover .card-img {
+    filter: brightness(0.3);
+    border: 4px solid #ff42a5;
+    border-radius: 20px;
+  }
+  .card:hover .watch-now{
+    color: #fff;
+}
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s;
+    color: #fff;
+  }
+  .card:hover .overlay {
+    display: flex;
+    opacity: 1;
+  
+  }
+
+  .fa-play {
+    font-size: 2rem;
+    padding-left: 0.2em;
+  }
+
+  .watch-now {
+    font-size: 1rem;
+    padding-left: 0.5em;
+    color: #fff;
+  }
+
+  .card p {
+    color: #534c64;
+    font-size: 1rem;
+    text-align: left;
+  }
+
 /*================== Media queries========================  */
 
 /* for small devices  */
 @media screen and (max-width: 576px) {
   .nav-container,
-  .nav-menus {
+  .nav-menus, .games-container {
     flex-direction: column;
   }
   .nav-menus {
@@ -154,20 +231,36 @@ nav {
   .nav-list-item {
     padding-bottom: 1em;
   }
-  .banner-container{
+  .banner-container {
     flex-direction: column-reverse;
     height: auto;
   }
-  .banner-content{
+  .banner-content {
     padding: 0.5em 0.5em 0em 2.5em;
   }
 
-  .banner-first-title{
+  .banner-first-title {
     font-size: 1rem;
   }
-  .banner-second-title{
+  .banner-second-title {
     font-size: 2rem;
   }
+  .games-section-title{
+    font-size: 2rem;
+  }
+  .card{
+    width: 100%; 
+  }
+  .fa-play{
+    margin-left:6rem;
+  }
+  .card p{
+    width: 80%;
+    text-align: justify;
+    padding: 0.3em 1.8em;
+  }
+  
+
 }
 
 /* for tablet or medium devices */
