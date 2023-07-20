@@ -330,6 +330,9 @@ footer styles =====
 .footer-list li{
   list-style: none;
 }
+footer a{
+  color: white;
+}
 .terms-list{
   display: grid;
   grid-template-columns: repeat(4,1fr);
